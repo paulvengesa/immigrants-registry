@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>First Steps — Płock App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header class="header">
+    <button class="leftcorner" id="hamburger" aria-label="Open menu">☰</button>
+    <button class="leftcorner" id="phoneBtn" aria-label="Phone numbers">📞</button>
+    
+    <div class="spacer"></div>
+
+    <div class="lang-dropdown">
+  <button id="langBtn">🌐</button>
+  <ul id="langMenu" class="lang-menu">
+    <li data-lang="pl">🇵🇱 Polish</li>
+    <li data-lang="eng">🇬🇧 English</li>
+    <li data-lang="ua">🇺🇦 Ukrainian</li>
+    <li data-lang="ru">🇷🇺 Russian</li>
+  </ul>
+</div>
+
+  </header>
+
+  <!-- Hamburger dropdown -->
+  <div id="menuDropdown" class="menu-card">
+    <ul>
+      <li><a href="firststeps.html" data-key="first_steps">First Steps</a></li>
+      <li><a href="questionnaire.html" data-key="survey">Survey</a></li>
+      <li><a href="#knowledge" data-key="knowledge_base">Knowledge Base</a></li>
+      <li><a href="#help" data-key="help">Help</a></li>
+    </ul>
+  </div>
+
+  <!-- Phone dropdown -->
+  <div id="phoneDropdown" class="menu-card" style="left: 50px;">
+    <ul>
+      <li data-key="police"><span class="label">Police</span> <span class="number">997</span></li>
+      <li data-key="cityHall"><span class="label">City Hall</span> <span class="number">24 367 15 00</span></li>
+      <li data-key="municipalPolice"><span class="label">Municipal Police</span> <span class="number">24 367 15 86</span></li>
+      <li data-key="immigrantsCenter"><span class="label">Center for Immigrants</span> <span class="number">24 367 16 50</span></li>
+    </ul>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

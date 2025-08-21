@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>First Steps — Płock App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="back"> ←</a>
+    <button class="leftcorner" id="hamburger" aria-label="Open menu">☰</button>
+    <button class="leftcorner" id="phoneBtn" aria-label="Phone numbers">📞</button>
+    
+    <div class="spacer"></div>
+
+    <div class="lang-dropdown">
+  <button id="langBtn">🌐</button>
+  <ul id="langMenu" class="lang-menu">
+    <li data-lang="pl">🇵🇱 Polish</li>
+    <li data-lang="eng">🇬🇧 English</li>
+    <li data-lang="ua">🇺🇦 Ukrainian</li>
+    <li data-lang="ru">🇷🇺 Russian</li>
+  </ul>
+</div>
+
+  </header>
+
+  <!-- Hamburger dropdown -->
+  <div id="menuDropdown" class="menu-card">
+    <ul>
+      <li><a href="firststeps.html" data-key="first_steps">First Steps</a></li>
+      <li><a href="questionnaire.html" data-key="survey">Survey</a></li>
+      <li><a href="#knowledge" data-key="knowledge_base">Knowledge Base</a></li>
+      <li><a href="#help" data-key="help">Help</a></li>
+    </ul>
+  </div>
+
+  <!-- Phone dropdown -->
+  <div id="phoneDropdown" class="menu-card" style="left: 50px;">
+    <ul>
+      <li data-key="police"><span class="label">Police</span> <span class="number">997</span></li>
+      <li data-key="cityHall"><span class="label">City Hall</span> <span class="number">24 367 15 00</span></li>
+      <li data-key="municipalPolice"><span class="label">Municipal Police</span> <span class="number">24 367 15 86</span></li>
+      <li data-key="immigrantsCenter"><span class="label">Center for Immigrants</span> <span class="number">24 367 16 50</span></li>
+    </ul>
+  </div>
+
+
+  <main class="content">
+  <h2 data-key="first_steps_title">First steps</h2>
+
+  <section class="card">
+    <h3 data-key="communication">Communication</h3>
+    <ul>
+      <li data-key="public_transport">Public transport: 
+        <ul>
+          <li data-key="city_bike">city bike</li>
+          <li data-key="pkm_timetable">PKM timetable</li>
+          <li data-key="km_timetable">KM timetable</li>
+        </ul>
+      </li>
+
+      <li data-key="own_transport">Own transport:
+         <ul>
+           <li data-key="driving_license">driving license</li>
+           <li data-key="traffic_law">traffic law</li>
+           <li data-key="vehicle_registration">vehicle registration</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3 data-key="stay">Stay</h3>
+    <ul>
+      <li data-key="pesel">PESEL</li>
+      <li data-key="residence_card">residence card</li>
+      <li data-key="citizenship">citizenship</li>
+      <li data-key="visa">visa</li>
+      <li data-key="polish_phone">Polish telephone number</li>
+      <li data-key="insurance">insurance</li>
+      <li data-key="finances">finances (bank account)</li>
+      <li data-key="security">security</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3 data-key="work_business">Work & Business</h3>
+    <ul>
+      <li data-key="looking_for_job">I'm looking for a job: 
+        <ul>
+          <li data-key="work_permit">Work permit</li>
+          <li data-key="employment_office">employment office</li>
+          <li data-key="central_work_db">central work database</li>
+          <li data-key="national_court_register">National Court Register</li>
+          <li data-key="ceidg">CEIDG</li>
+        </ul>
+      </li>
+      <li data-key="own_business">own business</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3 data-key="apartment">Apartment</h3>
+      <ul>
+          <li data-key="purchase_apartment">purchase of an apartment</li>
+          <li data-key="rent">rent</li>
+          <li data-key="social_housing">social housing</li>
+          <li data-key="collective_accommodation">collective accommodation</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3 data-key="education">Education</h3>
+    <ul>
+      <li data-key="kids">kids
+        <ul>
+          <li data-key="nursery">Nursery</li>
+          <li data-key="kindergarten">kindergarten</li>
+          <li data-key="primary">primary</li>
+          <li data-key="secondary">secondary</li>
+          <li data-key="adult_education">adult education</li>
+        </ul>
+      </li>
+      <li data-key="adults">adults</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3 data-key="health_social">Health & Social</h3>
+    <ul>
+      <li data-key="legal_aid">legal aid</li>
+      <li data-key="primary_care">selection of primary care clinic</li> 
+      <li data-key="treatment_nfz">where to get treatment - National Health Fund</li>
+      <li data-key="insurance2">insurance</li>
+      <li data-key="pug">PUG</li>
+      <li data-key="pharmacy">Pharmacy</li>
+      <li data-key="prescription">prescription</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h3 data-key="free_time">Free time</h3>
+    <ul>
+      <li data-key="calendar_events">calendar of events</li>
+      <li data-key="plock_arta">PŁOCK ARTA</li>
+      <li data-key="pokis">POKIS</li>
+      <li data-key="mosir">MOSIR</li>
+      <li data-key="mdk">MDK</li>
+      <li data-key="skd">SKD</li>
+      <li data-key="plock_library">Płock Library</li>
+      <li data-key="sport">Sport</li>
+      <li data-key="culture">culture</li>
+      <li data-key="recreation">recreation</li>
+      <li data-key="religion">religion</li>
+      <li data-key="uta">University of the Third Age</li>
+    </ul>
+  </section>
+</main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

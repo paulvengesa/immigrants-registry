@@ -1,0 +1,333 @@
+:root {
+  --orange: orangered;
+  --orange-hover: #d64000;
+  --gray: #666;
+  --bg: #fafafa;
+  --border: #e0e0e0;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-dropdown button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.lang-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  min-width: 150px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+.lang-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.lang-menu li:hover {
+  background-color: #eee;
+}
+
+.lang-menu.open {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #222;
+  line-height: 1.5;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.leftcorner, .flag, .back {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#phoneBtn {
+  color: var(--orange);
+}
+
+.back {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* MENUS */
+.menu-card {
+  position: absolute;
+  top: 56px;
+  left: 10px;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: none;
+  min-width: 260px;
+  font-family: inherit;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.menu-card.open {
+  display: block;
+}
+
+.menu-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-card li:last-child {
+  border-bottom: none;
+}
+
+.menu-card a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.menu-card a:hover {
+  color: var(--orange);
+}
+
+.number {
+  font-weight: bold;
+  color: var(--orange);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* START PAGE MAIN */
+.main {
+  padding: 24px;
+  text-align: center;
+}
+
+.logo {
+  display: block;
+  margin: 40px auto 8px;
+}
+
+/* Arabic welcome text */
+.welcome-ar {
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 400;
+}
+
+/* Button group layout */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Orange pill buttons */
+.orange-btn {
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 180px;
+  transition: background 0.2s ease;
+}
+
+.btn_txt {
+    color: var(--white);
+  text-decoration: none;
+}
+
+
+
+.orange-btn:hover {
+  background: var(--orange-hover);
+}
+
+/* Assistant bottom bar - screenshot style */
+.assistant-bar {
+  position: fixed;
+  left: 15%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--orange);
+  border-radius: 30px;
+  padding: 8px 12px;
+  background: white;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+  bottom: 200px
+}
+
+.assistant-bar input {
+  border: none;
+  flex: 1;
+  outline: none;
+  font-size: 14px;
+}
+
+.assistant-bar button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--orange);
+}
+
+/* Floating chat button */
+.chat-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--orange);
+  animation: pulseAnimation 2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulseAnimation {
+  0% { transform: scale(0.9); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+
+/* SURVEY PAGE MAIN */
+main.content {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--orange);
+}
+
+/* FORMS */
+.content label {
+  display: block;
+  margin: 10px 0 4px;
+  font-weight: 500;
+}
+
+select, input[type="radio"] {
+  accent-color: var(--orange);
+}
+
+select, button[type="submit"] {
+  font-size: 16px;
+  font-family: inherit;
+  padding: 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.actions button {
+  background: var(--orange);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.actions button:hover {
+  background: var(--orange-hover);
+}
+
+.result {
+  margin-top: 12px;
+  color: var(--gray);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  main.content {
+    margin: 10px;
+    padding: 15px;
+  }
+}

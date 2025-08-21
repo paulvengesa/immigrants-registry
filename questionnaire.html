@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Survey — Płock App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header class="header">
+    <a href="index.html" class="back"> ←</a>
+    <button class="leftcorner" id="hamburger" aria-label="Open menu">☰</button>
+    <button class="leftcorner" id="phoneBtn" aria-label="Phone numbers">📞</button>
+    
+    <div class="spacer"></div>
+
+    <div class="lang-dropdown">
+  <button id="langBtn">🌐</button>
+  <ul id="langMenu" class="lang-menu">
+    <li data-lang="pl">🇵🇱 Polish</li>
+    <li data-lang="eng">🇬🇧 English</li>
+    <li data-lang="ua">🇺🇦 Ukrainian</li>
+    <li data-lang="ru">🇷🇺 Russian</li>
+  </ul>
+</div>
+
+  </header>
+
+  <!-- Hamburger dropdown -->
+  <div id="menuDropdown" class="menu-card">
+    <ul>
+      <li><a href="firststeps.html" data-key="first_steps">First Steps</a></li>
+      <li><a href="questionnaire.html" data-key="survey">Survey</a></li>
+      <li><a href="#knowledge" data-key="knowledge_base">Knowledge Base</a></li>
+      <li><a href="#help" data-key="help">Help</a></li>
+    </ul>
+  </div>
+
+  <!-- Phone dropdown -->
+  <div id="phoneDropdown" class="menu-card" style="left: 50px;">
+    <ul>
+      <li data-key="police"><span class="label">Police</span> <span class="number">997</span></li>
+      <li data-key="cityHall"><span class="label">City Hall</span> <span class="number">24 367 15 00</span></li>
+      <li data-key="municipalPolice"><span class="label">Municipal Police</span> <span class="number">24 367 15 86</span></li>
+      <li data-key="immigrantsCenter"><span class="label">Center for Immigrants</span> <span class="number">24 367 16 50</span></li>
+    </ul>
+  </div>
+
+  <main class="content">
+  <h2 data-key="quick_questionnaire_title">Quick questionnaire</h2>
+  <form id="survey">
+    <label data-key="question_foreigner">Are you a foreigner?</label>
+    <div class="row">
+      <label><input type="radio" name="foreigner" value="yes" required> <span data-key="answer_yes">Yes</span></label>
+      <label><input type="radio" name="foreigner" value="no"> <span data-key="answer_no">No</span></label>
+    </div>
+
+    <label for="purpose" data-key="question_purpose">Purpose of your visit</label>
+    <select id="purpose" name="purpose" required>
+      <option value="tourist" data-key="purpose_tourist">Tourist</option>
+      <option value="stay" data-key="purpose_stay">I want to stay (e.g. job)</option>
+    </select>
+
+    <label data-key="question_children">Number of children</label>
+    <select name="children">
+      <option value="0" data-key="children_0">0</option>
+      <option value="1" data-key="children_1">1</option>
+      <option value="2" data-key="children_2">2</option>
+      <option value="more" data-key="children_more">More than 2</option>
+    </select>
+
+    <label for="education" data-key="question_education">Education</label>
+    <select id="education" name="education">
+      <option data-key="education_basic">Basic</option>
+      <option data-key="education_professional">Professional</option>
+      <option data-key="education_medium">Medium</option>
+      <option data-key="education_bachelor">1st degree (Bachelor)</option>
+      <option data-key="education_master">2nd degree (Master)</option>
+      <option data-key="education_doctoral">3rd degree (Doctoral)</option>
+    </select>
+
+    <div class="actions">
+      <button type="submit" data-key="submit_button">Submit</button>
+    </div>
+  </form>
+
+  <div id="surveyResult" class="result" aria-live="polite"></div>
+</main>
+
+  <script src="script.js"></script>
+</body>
+</html>
